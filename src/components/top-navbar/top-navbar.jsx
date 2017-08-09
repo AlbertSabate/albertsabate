@@ -7,7 +7,6 @@ class TopNavbar extends Component {
     {
       link: '#home',
       label: 'HOME',
-      default: true,
     }, {
       link: '#about',
       label: 'ABOUT',
