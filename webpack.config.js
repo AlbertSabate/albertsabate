@@ -27,7 +27,7 @@ module.exports = (env) => {
     module: {
       loaders: [
         {
-          test: /\.js?x$/i,
+          test: /\.(js|jsx)$/i,
           exclude: /(node_modules|public)/,
           use: [
             'babel-loader',
@@ -52,14 +52,12 @@ module.exports = (env) => {
             ],
           }),
         }, {
-          test: /\.(jpe?g|png|gif|svg)$/i,
-          loaders: [
-            'file-loader?hash=sha512&digest=hex&publicPath=/assets/&name=assets/img/[hash].[ext]',
-          ],
+          test: /\.(jpeg|jpg|png|gif|svg)$/i,
+          loader: 'file-loader?hash=sha512&digest=hex&name=assets/img/[hash].[ext]',
         },
         {
           test: /\.(eot|ttf|woff|woff2|otf)$/,
-          loader: 'file-loader?hash=sha512&digest=hex&publicPath=/assets/&name=assets/fonts/[hash].[ext]',
+          loader: 'file-loader?hash=sha512&digest=hex&publicPath=/&name=assets/fonts/[hash].[ext]',
         }, {
           test: /\.(json)$/,
           loader: 'json-loader',

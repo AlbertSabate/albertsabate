@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 
+import Albert from '../../assets/img/albert-min.jpeg'
+
 class Header extends Component {
   render() {
     return (
       <header>
-        Header
+        <img src={Albert} alt="Albert Sabaté" />
       </header>
     )
   }
