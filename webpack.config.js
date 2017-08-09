@@ -53,7 +53,7 @@ module.exports = (env) => {
           }),
         }, {
           test: /\.(jpeg|jpg|png|gif|svg)$/i,
-          loader: 'file-loader?hash=sha512&digest=hex&name=assets/img/[hash].[ext]',
+          loader: 'file-loader?hash=sha512&digest=hex&publicPath=/&name=assets/img/[hash].[ext]',
         },
         {
           test: /\.(eot|ttf|woff|woff2|otf)$/,
