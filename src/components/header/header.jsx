@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import addEvent from '../../helpers/add-event'
+import getNavbarHeight from '../../helpers/get-navbar-height'
 
 import './header.sass'
 
@@ -11,9 +12,11 @@ class Header extends Component {
     this.state = {
       windowHeight: 0,
     }
+
+    this.goDown = this.goDown.bind(this)
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.setHeaderHeight()
 
     addEvent(window, 'resize', () => {
@@ -31,11 +34,20 @@ class Header extends Component {
     return this.state.windowHeight
   }
 
+  goDown() {
+    window.scroll({
+      top: this.getHeaderHeight() - getNavbarHeight(),
+      behavior: 'smooth',
+    })
+  }
+
   render() {
     return (
       <header style={{ height: this.getHeaderHeight() }}>
         <div className="header-layout">
-          dfg
+          <div role="button" tabIndex={0} className="go-down text-center" onClick={this.goDown}>
+            <i className="fa fa-3x fa-angle-double-down" />
+          </div>
         </div>
       </header>
     )

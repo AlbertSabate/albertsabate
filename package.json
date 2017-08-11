@@ -21,7 +21,8 @@
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.6.1",
-    "reactstrap": "^4.8.0"
+    "reactstrap": "^4.8.0",
+    "smoothscroll-polyfill": "^0.3.6"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

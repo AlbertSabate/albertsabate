@@ -9,7 +9,7 @@ import Portfolio from './portfolio/portfolio'
 import Contact from './contact/contact'
 
 const App = () => (
-  <div className="container-fluid">
+  <div>
     <TopNavbar />
     <Header />
     <About />
