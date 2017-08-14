@@ -31,3 +31,25 @@
 
     .profile-about-label
       display: block
+
+@media only screen and (min-width: 992px)
+  .about
+    .profile-about
+      > div
+        &:nth-child(odd)
+          .profile-about-title
+            display: inline-block
+            width: 30%
+
+          .profile-about-label
+            display: inline-block
+            width: 70%
+
+        &:nth-child(even)
+          .profile-about-title
+            display: inline-block
+            width: 45%
+
+          .profile-about-label
+            display: inline-block
+            width: 55%

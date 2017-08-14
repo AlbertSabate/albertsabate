@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 import addEvent from '../../helpers/add-event'
-import getNavbarHeight from '../../helpers/get-navbar-height'
 
 import './top-navbar.sass'
 
@@ -39,15 +38,9 @@ class TopNavbar extends Component {
   }
 
   componentDidMount() {
-    this.navHeight = getNavbarHeight()
-
-    setInterval(() => { // this is for if anybody change font size
-      this.navHeight = getNavbarHeight()
-    }, 2500)
-
     addEvent(window, 'scroll', () => {
       this.setState({
-        isHome: window.scrollY < window.innerHeight - this.navHeight,
+        isHome: window.scrollY <= 10,
       })
     })
   }
