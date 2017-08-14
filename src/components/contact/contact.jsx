@@ -19,14 +19,20 @@ class Contact extends Component {
 
   render() {
     return (
-      <section className="contact py-15">
+      <section className="contact py-12">
         <div className="container">
           <div className="row justify-content-around">
             {Contact.contacts.map(contact => (
-              <div key={`contact-${contact.icon}`} className="col-3 text-center">
-                <i className={`fa fa-${contact.icon}`} />
-                <h3>{contact.title}</h3>
-                <a href={contact.link}>{contact.label}</a>
+              <div key={`contact-${contact.icon}`} className="col-md-4">
+                <div className="contact-box row align-items-center">
+                  <div className="col-3 my-2 py-2 text-right">
+                    <i className={`fa fa-2x fa-${contact.icon}`} />
+                  </div>
+                  <div className="col-9 my-2 py-2">
+                    <h5>{contact.title}</h5>
+                    <h6><a href={contact.link}>{contact.label}</a></h6>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

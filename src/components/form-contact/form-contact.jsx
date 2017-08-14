@@ -42,7 +42,7 @@ class FormContact extends Component {
     return (
       <section className="container form-contact text-center py-15">
         <h1>SAY HELLO</h1>
-        <h2 className="pt-5 pb-10">Ready to keep in touch with me for amazing things?</h2>
+        <h4 className="pt-5 pb-10">Ready to keep in touch with me for amazing things?</h4>
         <Form className="pt-5">
           <div className="row">
             <div className="col-4">
