@@ -6,6 +6,26 @@ import './about.sass'
 import AlbertImg from '../../assets/img/albert.jpg'
 
 class About extends Component {
+  static profileAbout = [
+    {
+      ID: 'NAME',
+      title: 'NAME',
+      label: 'Albert Sabaté',
+    }, {
+      ID: 'JOB_TITLE',
+      title: 'JOB TITLE',
+      label: 'JS Developer',
+    }, {
+      ID: 'AGE',
+      title: 'AGE',
+      label: 27,
+    }, {
+      ID: 'LOCATION',
+      title: 'LOCATION',
+      label: 'Barcelona, Spain',
+    },
+  ]
+
   render() {
     return (
       <section className="container about">
@@ -26,22 +46,12 @@ class About extends Component {
                 </p>
               </div>
               <div className="row mb-8 profile-about">
-                <div className="col-6 mb-5">
-                  <span className="profile-about-title">NAME</span>
-                  <span className="profile-about-label">Albert Sabaté</span>
-                </div>
-                <div className="col-6 mb-5">
-                  <span className="profile-about-title">JOB TITLE</span>
-                  <span className="profile-about-label">JS Developer</span>
-                </div>
-                <div className="col-6 mb-5">
-                  <span className="profile-about-title">AGE</span>
-                  <span className="profile-about-label">27</span>
-                </div>
-                <div className="col-6 mb-5">
-                  <span className="profile-about-title">LOCATION</span>
-                  <span className="profile-about-label">Barcelona, Spain</span>
-                </div>
+                {About.profileAbout.map(about => (
+                  <div className="col-6 mb-5" key={`profile-about-${about.ID}`}>
+                    <span className="profile-about-title">{about.title}</span>
+                    <span className="profile-about-label">{about.label}</span>
+                  </div>
+                ))}
               </div>
               <ButtonGroup>
                 <Button color="primary"><i className="fa fa-download" />Download CV</Button>

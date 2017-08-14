@@ -5,11 +5,13 @@ import './contact.sass'
 class Contact extends Component {
   static contacts = [
     {
+      ID: 'phone',
       icon: 'phone',
       title: 'CALL ME',
       link: 'tel:+34688908886',
       label: '(+34) 688 908 886',
     }, {
+      ID: 'mail',
       icon: 'envelope',
       title: 'MAIL',
       link: 'mailto:albert@sabatemartinez.com?Subject=Hello',
@@ -23,7 +25,7 @@ class Contact extends Component {
         <div className="container">
           <div className="row justify-content-around">
             {Contact.contacts.map(contact => (
-              <div key={`contact-${contact.icon}`} className="col-md-4">
+              <div key={`contact-${contact.ID}`} className="col-md-4">
                 <div className="contact-box row align-items-center">
                   <div className="col-3 my-2 py-2 text-right">
                     <i className={`fa fa-2x fa-${contact.icon}`} />
