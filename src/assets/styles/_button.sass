@@ -1,2 +1,27 @@
 .btn
   cursor: pointer
+
+  &:hover
+    background-color: transparent
+
+  &.btn-primary
+    &:hover
+      border-color: $btn-primary-border
+      color: $btn-primary-text-hover
+
+    &:active
+      box-shadow: $btn-primary-shadow
+
+    &:focus
+      box-shadow: none
+
+  &.btn-secondary
+    &:hover
+      border-color: $btn-secondary-border
+      color: $btn-secondary-text-hover
+
+    &:active
+      box-shadow: $btn-secondary-shadow
+
+    &:focus
+      box-shadow: none

@@ -2,25 +2,39 @@ import React, { Component } from 'react'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 import addEvent from '../../helpers/add-event'
+import goTo from '../../helpers/go-to'
 
 import './top-navbar.sass'
 
 class TopNavbar extends Component {
   static menu = [
     {
-      link: '#home',
+      click: () => {
+        window.scroll({
+          top: 0,
+          behavior: 'smooth',
+        })
+      },
       label: 'HOME',
     }, {
-      link: '#about',
+      click: () => {
+        goTo('about')
+      },
       label: 'ABOUT',
     }, {
-      link: '#skills',
+      click: () => {
+        goTo('skills')
+      },
       label: 'SKILLS',
     }, {
-      link: '#portfolio',
+      click: () => {
+        goTo('portfolio')
+      },
       label: 'PORTFOLIO',
     }, {
-      link: '#contact',
+      click: () => {
+        goTo('contact')
+      },
       label: 'CONTACT',
     },
   ]
@@ -65,7 +79,7 @@ class TopNavbar extends Component {
           <Nav className="ml-auto" navbar>
             {TopNavbar.menu.map(child => (
               <NavItem key={`nav-dropdown-${child.label}`}>
-                <NavLink href={child.link}>
+                <NavLink onClick={child.click}>
                   {child.label}
                 </NavLink>
               </NavItem>

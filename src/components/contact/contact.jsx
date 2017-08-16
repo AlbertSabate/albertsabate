@@ -21,8 +21,8 @@ class Contact extends Component {
 
   render() {
     return (
-      <section className="contact py-12">
-        <div className="container">
+      <section id="contact" className="contact">
+        <div className="container py-15">
           <div className="row justify-content-around">
             {Contact.contacts.map(contact => (
               <div key={`contact-${contact.ID}`} className="col-md-4">
