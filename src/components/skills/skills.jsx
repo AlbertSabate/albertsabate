@@ -22,6 +22,11 @@ class Skills extends Component {
     return (
       <section id="skills" className="skills">
         <div className="container py-15">
+          <div className="row text-center mb-10">
+            <div className="col">
+              <h1>My Skills</h1>
+            </div>
+          </div>
           <div className="row justify-content-md-center">
             {Skills.skillsIcon.map(skillIcon => (
               <div className="col skills-logos" key={`skill-icon-${skillIcon.ID}`}>

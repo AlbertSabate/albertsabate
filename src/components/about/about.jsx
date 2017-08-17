@@ -69,10 +69,10 @@ class About extends Component {
                   ))}
                 </div>
                 <div className="row text-center justify-content-center">
-                  <div className="col-4">
+                  <div className="col-5">
                     <Button color="primary" onClick={About.downloadCV}><i className="fa fa-download" /> Download CV</Button>
                   </div>
-                  <div className="col-4">
+                  <div className="col-5">
                     <Button color="secondary" onClick={About.hireMe}><i className="fa fa-send" /> Hire Me</Button>
                   </div>
                 </div>
