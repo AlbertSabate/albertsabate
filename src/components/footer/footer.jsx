@@ -18,7 +18,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer className="text-center py-15">
+      <footer className="text-center container-fluid py-15">
         <div className="row">
           <div className="col">
             Copyright © {Footer.year}. All rights reserved Designed By
