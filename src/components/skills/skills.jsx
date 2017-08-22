@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Container, Row, Col } from 'reactstrap'
 import ReactSVG from 'react-svg'
 
 import './skills.sass'
@@ -21,20 +22,20 @@ class Skills extends Component {
   render() {
     return (
       <section id="skills" className="skills">
-        <div className="container py-15">
-          <div className="row text-center mb-10">
-            <div className="col">
+        <Container className="py-15">
+          <Row className="text-center mb-10">
+            <Col>
               <h1>My Skills</h1>
-            </div>
-          </div>
-          <div className="row justify-content-md-center">
+            </Col>
+          </Row>
+          <Row className="justify-content-md-center">
             {Skills.skillsIcon.map(skillIcon => (
-              <div className="col skills-logos" key={`skill-icon-${skillIcon.ID}`}>
+              <Col className="skills-logos" key={`skill-icon-${skillIcon.ID}`}>
                 <ReactSVG path={skillIcon.img} />
-              </div>
+              </Col>
             ))}
-          </div>
-        </div>
+          </Row>
+        </Container>
       </section>
     )
   }

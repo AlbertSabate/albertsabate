@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { ButtonGroup, Button } from 'reactstrap';
 
 import addEvent from '../../helpers/add-event'
 import goTo from '../../helpers/go-to'
@@ -9,14 +8,6 @@ import './header.sass'
 class Header extends Component {
   static goDown() {
     goTo('about')
-  }
-
-  static goPortfolio() {
-    goTo('portfolio')
-  }
-
-  static goContact() {
-    goTo('contact')
   }
 
   constructor(props) {
@@ -46,22 +37,34 @@ class Header extends Component {
   }
 
   render() {
+    let countDV = 0
+    let countJS = 0
+
     return (
       <header style={{ height: this.getHeaderHeight() }}>
         <div className="header-layout text-center">
-          <div className="header-title p-10">
+          <div className="header-title">
             <h1>
-              <span>JAVASCRIPT</span>
-              <span>DEVELOPER</span>
+              {'JAVASCRIPT'.split('').map((letter) => {
+                countJS += 1
+
+                return (
+                  <span className={`header-js header-js-${countJS}`} key={`header-js-${countJS}`}>
+                    {letter}
+                  </span>
+                )
+              })}
+              &nbsp;
+              {'DEVELOPER'.split('').map((letter) => {
+                countDV += 1
+
+                return (
+                  <span className={`header-dv header-dv-${countDV}`} key={`header-dv-${countDV}`}>
+                    {letter}
+                  </span>
+                )
+              })}
             </h1>
-            <ButtonGroup className="mt-5">
-              <Button color="primary" className="btn-inverse mr-5" onClick={Header.goPortfolio}>
-                PORTFOLIO
-              </Button>
-              <Button color="secondary" className="btn-inverse" onClick={Header.goContact}>
-                CONTACT
-              </Button>
-            </ButtonGroup>
           </div>
           <div role="button" tabIndex={0} className="go-down" onClick={Header.goDown}>
             <i className="fa fa-3x fa-angle-double-down" />

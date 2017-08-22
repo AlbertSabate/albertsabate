@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button } from 'reactstrap'
+import { Container, Row, Col, Button } from 'reactstrap'
 
 import goTo from '../../helpers/go-to'
 
@@ -43,14 +43,14 @@ class About extends Component {
   render() {
     return (
       <section id="about" className="about">
-        <div className="container py-15">
-          <div className="row">
-            <div className="col-md-4">
+        <Container className="py-15">
+          <Row>
+            <Col xs="false" md="4">
               <div className="profile-picture">
                 <img src={AlbertImg} alt="Albert Sabaté" />
               </div>
-            </div>
-            <div className="col-md-8">
+            </Col>
+            <Col xs="false" md="8">
               <div className="pl-10 pt-10">
                 <div className="profile-desc mb-8">
                   <h1>HELLO WORLD!</h1>
@@ -60,26 +60,25 @@ class About extends Component {
                     interested on UX. I’m a very uncomplicated person: I love technology and sports.`}
                   </p>
                 </div>
-                <div className="row mb-10 profile-about">
+                <Row className="mb-10 profile-about">
                   {About.profileAbout.map(about => (
-                    <div className="col-6 mb-5" key={`profile-about-${about.ID}`}>
+                    <Col xs="6" className="mb-5" key={`profile-about-${about.ID}`}>
                       <span className="profile-about-title">{about.title}</span>
                       <span className="profile-about-label">{about.label}</span>
-                    </div>
+                    </Col>
                   ))}
-                </div>
-                <div className="row text-center justify-content-center">
-                  <div className="col-5">
-                    <Button color="primary" onClick={About.downloadCV}><i className="fa fa-download" /> Download CV</Button>
-                  </div>
-                  <div className="col-5">
-                    <Button color="secondary" onClick={About.hireMe}><i className="fa fa-send" /> Hire Me</Button>
-                  </div>
-                </div>
+                </Row>
+                <Row className="text-center">
+                  <Col>
+                    <Button color="primary" onClick={About.downloadCV}>
+                      <i className="fa fa-download" /> Download CV
+                    </Button>
+                  </Col>
+                </Row>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
     )
   }
