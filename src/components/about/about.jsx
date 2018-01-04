@@ -16,7 +16,7 @@ class About extends Component {
     }, {
       ID: 'JOB_TITLE',
       title: 'JOB TITLE',
-      label: 'JS Developer',
+      label: 'Web Developer',
     }, {
       ID: 'AGE',
       title: 'AGE',
@@ -24,7 +24,7 @@ class About extends Component {
     }, {
       ID: 'LOCATION',
       title: 'LOCATION',
-      label: 'Barcelona, Spain',
+      label: 'Singapore',
     },
   ]
 

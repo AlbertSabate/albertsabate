@@ -7,6 +7,7 @@ import './skills.sass'
 import AngularImg from '../../assets/img/logos/angular.svg'
 import HTML5Img from '../../assets/img/logos/html5.svg'
 import NodeJSImg from '../../assets/img/logos/nodejs.svg'
+import PHPImg from '../../assets/img/logos/php.svg'
 import ReactImg from '../../assets/img/logos/react.svg'
 import SassImg from '../../assets/img/logos/sass.svg'
 
@@ -15,8 +16,9 @@ class Skills extends Component {
     { ID: 0, img: HTML5Img },
     { ID: 1, img: AngularImg },
     { ID: 2, img: NodeJSImg },
-    { ID: 3, img: ReactImg },
-    { ID: 4, img: SassImg },
+    { ID: 3, img: PHPImg },
+    { ID: 4, img: ReactImg },
+    { ID: 5, img: SassImg },
   ]
 
   render() {

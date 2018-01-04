@@ -43,28 +43,33 @@ class Header extends Component {
     return (
       <header style={{ height: this.getHeaderHeight() }}>
         <div className="header-layout text-center">
-          <div className="header-title">
-            <h1>
-              {'JAVASCRIPT'.split('').map((letter) => {
-                countJS += 1
+          <div>
+            <div className="header-title">
+              <h1>
+                {'WEBPAGE'.split('').map((letter) => {
+                  countJS += 1
 
-                return (
-                  <span className={`header-js header-js-${countJS}`} key={`header-js-${countJS}`}>
-                    {letter}
-                  </span>
-                )
-              })}
-              &nbsp;
-              {'DEVELOPER'.split('').map((letter) => {
-                countDV += 1
+                  return (
+                    <span className={`header-js header-js-${countJS}`} key={`header-js-${countJS}`}>
+                      {letter}
+                    </span>
+                  )
+                })}
+                &nbsp;
+                {'DEVELOPER'.split('').map((letter) => {
+                  countDV += 1
 
-                return (
-                  <span className={`header-dv header-dv-${countDV}`} key={`header-dv-${countDV}`}>
-                    {letter}
-                  </span>
-                )
-              })}
-            </h1>
+                  return (
+                    <span className={`header-dv header-dv-${countDV}`} key={`header-dv-${countDV}`}>
+                      {letter}
+                    </span>
+                  )
+                })}
+              </h1>
+            </div>
+            <div className="header-subtitle">
+              · ReactJS · AngularJS · NodeJS · PHP · HTML5 · JS · SASS / CSS3 ·
+            </div>
           </div>
           <div role="button" tabIndex={0} className="go-down" onClick={Header.goDown} onKeyPress={Header.goDown}>
             <i className="fa fa-3x fa-angle-double-down" />
