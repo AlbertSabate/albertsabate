@@ -9,8 +9,8 @@ class Contact extends Component {
       ID: 'phone',
       icon: 'phone',
       title: 'CALL ME',
-      link: 'tel:+34688908886',
-      label: '(+34) 688 908 886',
+      link: 'tel:+6590841575',
+      label: '(+65) 9084 1575',
     }, {
       ID: 'mail',
       icon: 'envelope',

@@ -66,7 +66,7 @@ class Header extends Component {
               })}
             </h1>
           </div>
-          <div role="button" tabIndex={0} className="go-down" onClick={Header.goDown}>
+          <div role="button" tabIndex={0} className="go-down" onClick={Header.goDown} onKeyPress={Header.goDown}>
             <i className="fa fa-3x fa-angle-double-down" />
           </div>
         </div>

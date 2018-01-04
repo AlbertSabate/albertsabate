@@ -69,12 +69,12 @@ class TopNavbar extends Component {
     const home = this.state.isHome ? 'navbar-home' : ''
 
     return (
-      <Navbar role="navigation" light inverse fixed="top" toggleable className={home}>
-        <NavbarToggler right onClick={this.toggle} />
+      <Navbar role="navigation" dark fixed="top" expand="md" className={home}>
         <NavbarBrand href="/" className="brand">
           <span>Albert</span>
           <span>Sabaté</span>
         </NavbarBrand>
+        <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             {TopNavbar.menu.map(child => (

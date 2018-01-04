@@ -24,6 +24,9 @@ module.exports = (env) => {
       extensions: ['.js', '.jsx'],
     },
     devtool: !isProduction ? 'source-map' : false,
+    devServer: {
+      historyApiFallback: true,
+    },
     module: {
       loaders: [
         {

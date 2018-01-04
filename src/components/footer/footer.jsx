@@ -35,6 +35,7 @@ class Footer extends Component {
                 key={`footer-icon-${socialIcon.ID}`}
                 target={socialIcon.ID}
                 href={socialIcon.link}
+                rel="noopener noreferrer"
                 className="social-icon"
               >
                 <span className="fa-stack fa-lg">

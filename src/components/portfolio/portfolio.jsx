@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col, Card, CardImg, CardText,
-  CardBlock, CardTitle, CardSubtitle } from 'reactstrap'
+  CardBody, CardTitle, CardSubtitle } from 'reactstrap'
 
 import InteractiusImg from '../../assets/img/portfolio/interactius/logo.png'
 import AlberTenezImg from '../../assets/img/portfolio/albertenez/albertenez.svg'
@@ -70,20 +70,20 @@ class Portfolio extends Component {
 
               return (
                 <Col xs="6" md="3" key={`portolio-card-${count}`}>
-                  <Card block inverse color="secondary">
+                  <Card>
                     <CardImg
                       top
                       width="100%"
                       src={work.img}
                       alt={work.title}
                     />
-                    <CardBlock>
+                    <CardBody>
                       <CardTitle>{work.title}</CardTitle>
                       <CardSubtitle>{work.subtitle}</CardSubtitle>
                       <CardText>
                         {work.desc}
                       </CardText>
-                    </CardBlock>
+                    </CardBody>
                   </Card>
                 </Col>
               )
