@@ -53,7 +53,7 @@ class About extends Component {
             <Col xs="false" md="8">
               <div className="pl-10 pt-10">
                 <div className="profile-desc mb-8">
-                  <h1>HELLO WORLD!</h1>
+                  <h1>HELLO!</h1>
                   <p className="my-8">
                     {`My name is Albert a JavaScript Developer from Barcelona. I love being able to
                     combine the power of the Backend with the beauty of the Frontend, also I'm very

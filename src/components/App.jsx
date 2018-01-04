@@ -7,7 +7,8 @@ import About from './about/about'
 import Skills from './skills/skills'
 import Portfolio from './portfolio/portfolio'
 import Contact from './contact/contact'
-import FormContact from './form-contact/form-contact'
+// import FormContact from './form-contact/form-contact'
+import Opinion from './opinion/opinion'
 
 const App = () => (
   <div>
@@ -17,7 +18,8 @@ const App = () => (
     <Skills />
     <Portfolio />
     <Contact />
-    <FormContact />
+    {/* <FormContact /> */}
+    <Opinion />
     <Footer />
   </div>
 )
