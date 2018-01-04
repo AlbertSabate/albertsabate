@@ -13,6 +13,10 @@ import ElCafeDeLaPlataImg from '../../assets/img/portfolio/elcafedelaplata/elcaf
 // import DjBenMartinImg from '../../assets/img/portfolio/djbenmartin/benMartin.svg'
 import GooltrackingImg from '../../assets/img/portfolio/gooltracking/gooltracking.png'
 
+import elcafe1 from '../../assets/img/portfolio/elcafedelaplata/cafe1.png'
+import elcafe2 from '../../assets/img/portfolio/elcafedelaplata/cafe2.png'
+import elcafe3 from '../../assets/img/portfolio/elcafedelaplata/cafe3.png'
+
 import './portfolio.sass'
 
 class Portfolio extends Component {
@@ -54,6 +58,10 @@ class Portfolio extends Component {
       title: 'el Café de la Plata',
       href: 'https://elcafedelaplata.net/',
       subtitle: 'elcafedelaplata.net',
+      description: 'Lorem Ipsum blablabla',
+      skills: ['PHP', 'HTML', 'CSS', 'JS'],
+      highlights: ['highlights', 'responsabilities'],
+      images: [elcafe1, elcafe2, elcafe3],
     }, /* {
       ID: 7,
       img: DjBenMartinImg,
@@ -117,6 +125,10 @@ class Portfolio extends Component {
                   isOpen={this.state[`modal-${work.ID}`]}
                   toggle={() => this.toggleModal(work.ID)}
                   title={work.title}
+                  description={work.description}
+                  skills={work.skills}
+                  highlights={work.highlights}
+                  images={work.images}
                 />
               </Col>
             ))}
