@@ -10,6 +10,15 @@ class Header extends Component {
     goTo('about')
   }
 
+  static addTitleShowClass(prefix, countJS) {
+    setTimeout(() => {
+      const el = document.getElementsByClassName(`header-${prefix}-${countJS}`)
+      if (el.length > 0) {
+        el[0].className += ` header-${prefix}-show`
+      }
+    }, Math.floor((Math.random() * 3000) + 101))
+  }
+
   constructor(props) {
     super(props)
 
@@ -49,6 +58,7 @@ class Header extends Component {
                 {'WEBPAGE'.split('').map((letter) => {
                   countJS += 1
 
+                  Header.addTitleShowClass('js', countJS)
                   return (
                     <span className={`header-js header-js-${countJS}`} key={`header-js-${countJS}`}>
                       {letter}
@@ -59,6 +69,7 @@ class Header extends Component {
                 {'DEVELOPER'.split('').map((letter) => {
                   countDV += 1
 
+                  Header.addTitleShowClass('dv', countDV)
                   return (
                     <span className={`header-dv header-dv-${countDV}`} key={`header-dv-${countDV}`}>
                       {letter}

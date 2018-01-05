@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col, Button } from 'reactstrap'
+import moment from 'moment'
 
 import goTo from '../../helpers/go-to'
 
@@ -20,7 +21,7 @@ class About extends Component {
     }, {
       ID: 'AGE',
       title: 'AGE',
-      label: 27,
+      label: moment().diff('1990-02-10', 'years'),
     }, {
       ID: 'LOCATION',
       title: 'LOCATION',
@@ -54,11 +55,14 @@ class About extends Component {
               <div className="pl-10 pt-10">
                 <div className="profile-desc mb-8">
                   <h1>HELLO!</h1>
-                  <p className="my-8">
-                    {`My name is Albert a JavaScript Developer from Barcelona. I love being able to
-                    combine the power of the Backend with the beauty of the Frontend, also I'm very
-                    interested on UX. I’m a very uncomplicated person: I love technology and sports.`}
-                  </p>
+                  <span className="my-8">
+                    <p>
+                      My name is Albert a JavaScript Developer from Barcelona. I love being able to
+                      combine the power of the <i>backend</i> with the beauty of the
+                      <i>frontend</i>. I’m also very interested in <i>UX</i>.
+                    </p>
+                    <p>I’m a very easy person: I love technology, travel and sports.</p>
+                  </span>
                 </div>
                 <Row className="mb-10 profile-about">
                   {About.profileAbout.map(about => (

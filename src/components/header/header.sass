@@ -21,7 +21,19 @@ header
 
     .header-title
       .header-js
+        opacity: 0
         font-weight: 300
+        transition: .8s linear
+
+        &.header-js-show
+          opacity: 1
+
+      .header-dv
+        opacity: 0
+        transition: .8s linear
+
+        &.header-dv-show
+          opacity: 1
 
     .header-subtitle
       font-size: .8rem
