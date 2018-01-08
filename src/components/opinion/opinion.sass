@@ -2,5 +2,33 @@
 @import '../../assets/styles/mixins'
 
 .opinion-box
-  border: 1px dotted $color4
-  border-radius: 25%
+  display: flex
+  padding: 1rem
+  background-color: $color3
+  border-radius: $border-radius
+
+  .opinion-img
+    min-width: 100px
+
+    img
+      width: 80px
+      border-radius: 50%
+
+    span
+      display: block
+      margin-top: .3rem
+
+  .opinion-text
+    margin-left: 1rem
+    padding: 0 .7rem
+    text-align: left
+    border-left: 10px solid $color4
+    quotes: "\201C""\201D""\2018""\2019"
+
+  .opinion-text:before
+    color: $color4
+    content: open-quote
+    font-size: 3rem
+    line-height: 0
+    margin-right: .5rem
+    vertical-align: -1.1rem

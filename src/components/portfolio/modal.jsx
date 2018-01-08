@@ -8,6 +8,7 @@ class ModalPortfolio extends React.Component {
     className: PropTypes.string,
     toggle: PropTypes.func,
     title: PropTypes.string,
+    subtitle: PropTypes.string,
     description: PropTypes.string,
     images: PropTypes.array,
     skills: PropTypes.array,
@@ -19,6 +20,7 @@ class ModalPortfolio extends React.Component {
     className: 'modal-portfolio',
     toggle: () => {},
     title: '',
+    subtitle: '',
     description: '',
     images: [],
     skills: [],
@@ -31,6 +33,7 @@ class ModalPortfolio extends React.Component {
       toggle,
       className,
       title,
+      subtitle,
       description,
       images,
       skills,
@@ -40,7 +43,7 @@ class ModalPortfolio extends React.Component {
     return (
       <div>
         <Modal isOpen={isOpen} toggle={toggle} className={className} size="lg">
-          <ModalHeader toggle={toggle}>{title}</ModalHeader>
+          <ModalHeader toggle={toggle}>{subtitle} @ {title}</ModalHeader>
           <ModalBody>
             <Row className="modal-images">
               {images.map(image => (
@@ -56,9 +59,7 @@ class ModalPortfolio extends React.Component {
             </ul>
             <h5>Project Description</h5>
             <Row>
-              <Col className="pl-8 mb-5">
-                {description}
-              </Col>
+              <Col className="pl-8 mb-5" dangerouslySetInnerHTML={{ __html: description }} />
             </Row>
             <h5>Highlights & Responsabilities</h5>
             <ul>
