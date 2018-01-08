@@ -7,12 +7,18 @@
   background-color: $color3
   border-radius: $border-radius
 
+  @include media-breakpoint-down(sm)
+    display: block
+
   .opinion-img
     min-width: 100px
 
     img
       width: 80px
       border-radius: 50%
+
+      @include media-breakpoint-down(sm)
+        width: 100px
 
     span
       display: block
@@ -24,6 +30,13 @@
     text-align: left
     border-left: 10px solid $color4
     quotes: "\201C""\201D""\2018""\2019"
+
+    @include media-breakpoint-down(sm)
+      margin-left: 0
+      margin-top: 1rem
+      padding-top: 1rem
+      border-left: 0
+      border-top: 10px solid $color4
 
   .opinion-text:before
     color: $color4

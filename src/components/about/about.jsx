@@ -59,7 +59,7 @@ class About extends Component {
                     <p>
                       My name is Albert a JavaScript Developer from Barcelona. I love being able to
                       combine the power of the <i>backend</i> with the beauty of the
-                      <i>frontend</i>. I’m also very interested in <i>UX</i>.
+                      <i> frontend</i>. I’m also very interested in <i>UX</i>.
                     </p>
                     <p>I’m a very easy person: I love technology, travel and sports.</p>
                   </span>

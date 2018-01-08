@@ -13,7 +13,7 @@ class Header extends Component {
   static addTitleShowClass(prefix, countJS) {
     setTimeout(() => {
       const el = document.getElementsByClassName(`header-${prefix}-${countJS}`)
-      if (el.length > 0) {
+      if (el.length > 0 && el[0].className.search(`header-${prefix}-show`) === -1) {
         el[0].className += ` header-${prefix}-show`
       }
     }, Math.floor((Math.random() * 3000) + 101))
