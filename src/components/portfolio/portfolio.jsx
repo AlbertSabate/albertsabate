@@ -80,7 +80,11 @@ class Portfolio extends Component {
         'Webpack',
         'AWS',
       ],
-      highlights: ['lorem1', 'lorem2'],
+      highlights: [
+        'Analysis, design and development of the platform Klaud9',
+        'Responsible for the servers, frontend and backend of the platform',
+        'Responsible for IT personnel',
+      ],
       images: [k91, k92, k93],
     }, {
       ID: 2,
@@ -106,7 +110,10 @@ class Portfolio extends Component {
         'Webpack',
         'AWS',
       ],
-      highlights: ['lorem1', 'lorem2'],
+      highlights: [
+        'Responsible for the migration to ReactJS',
+        'Design and implementation of the Solutions module (frontend core on Bigfinite)',
+      ],
       images: [bf1, bf2, bf3],
     }, {
       ID: 3,
@@ -148,7 +155,11 @@ class Portfolio extends Component {
         'jQuery',
         'Grunt',
       ],
-      highlights: ['lorem1', 'lorem2'],
+      highlights: [
+        'Design and development of the plataform eShop with AngularJS',
+        'Responsible for migrating angular 1 to angular 2',
+        'Mantain the API, developed in PhalconPHP',
+      ],
       images: [sc1, sc2, sc3],
     }, {
       ID: 4,
@@ -182,7 +193,10 @@ class Portfolio extends Component {
         'Grunt',
         'AWS',
       ],
-      highlights: ['lorem1', 'lorem2'],
+      highlights: [
+        'Analysis, design and development of the platform',
+        'Responsible for the servers, frontend & backend of the platform',
+      ],
       images: [sal1, sal2, sal3],
     }, {
       ID: 5,
@@ -216,7 +230,11 @@ class Portfolio extends Component {
         'jQuery',
         'AJAX',
       ],
-      highlights: ['lorem1', 'lorem2'],
+      highlights: [
+        'Design and development of the comitium suite platform',
+        'Design and development solutions for clients',
+        'Technician consultant',
+      ],
       images: [bab1, bab2, bab3],
     }, {
       ID: 6,
@@ -240,7 +258,11 @@ class Portfolio extends Component {
         'HTML',
         'CSS',
       ],
-      highlights: ['lorem1', 'lorem2'],
+      highlights: [
+        'Design and development',
+        'Responsible for the servers',
+        'Technician consultant',
+      ],
       images: [gool1, gool2, gool3],
     }, {
       ID: 7,
@@ -262,7 +284,11 @@ class Portfolio extends Component {
         'jQuery',
         'AJAX',
       ],
-      highlights: ['lorem1', 'lorem2'],
+      highlights: [
+        'Design and development',
+        'Responsible for the servers',
+        'Technician consultant',
+      ],
       images: [elcafe1, elcafe2, elcafe3],
     },
   ]

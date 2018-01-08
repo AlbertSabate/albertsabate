@@ -61,7 +61,7 @@ class ModalPortfolio extends React.Component {
             <Row>
               <Col className="pl-8 mb-5" dangerouslySetInnerHTML={{ __html: description }} />
             </Row>
-            <h5>Highlights & Responsabilities</h5>
+            <h5>Highlights & Responsibilities</h5>
             <ul>
               {highlights.map(highlight => (
                 <li key={highlight}>{highlight}</li>
