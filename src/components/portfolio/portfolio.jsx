@@ -78,6 +78,7 @@ class Portfolio extends Component {
         'JavaScript',
         'Typescript',
         'Webpack',
+        'AWS',
       ],
       highlights: ['lorem1', 'lorem2'],
       images: [k91, k92, k93],
@@ -96,7 +97,15 @@ class Portfolio extends Component {
         having to adapt or change the currently existing systems and with a customer ROI under six
         months. With efficiency, collaboration, interdisciplinary, joy, respect, transparency &
         commitment.</p>`,
-      skills: ['NodeJS', 'ReactJS', 'SASS', 'JavaScript', 'jQuery', 'Webpack'],
+      skills: [
+        'NodeJS',
+        'ReactJS',
+        'SASS',
+        'JavaScript',
+        'jQuery',
+        'Webpack',
+        'AWS',
+      ],
       highlights: ['lorem1', 'lorem2'],
       images: [bf1, bf2, bf3],
     }, {
@@ -171,6 +180,7 @@ class Portfolio extends Component {
         'AJAX',
         'Social Media API',
         'Grunt',
+        'AWS',
       ],
       highlights: ['lorem1', 'lorem2'],
       images: [sal1, sal2, sal3],
@@ -197,7 +207,15 @@ class Portfolio extends Component {
         safety large volumes of contents and large audiences, be it a Digital Diary, an e-Commerce,
         an App...</p>
         <p>BAB. We convert good ideas into profitable businesses.</p>`,
-      skills: ['Symfony 2', 'PHP', 'HTML', 'CSS', 'JavaScript', 'jQuery', 'AJAX'],
+      skills: [
+        'Symfony 2',
+        'PHP',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'jQuery',
+        'AJAX',
+      ],
       highlights: ['lorem1', 'lorem2'],
       images: [bab1, bab2, bab3],
     }, {
@@ -212,7 +230,16 @@ class Portfolio extends Component {
         synthesis of all our knowledge and experience achieved along these years!</p>
         <p>GoolTracking is a communication platform, management and online analysis, fully
         scalable and customizable according to the specific needs and features of each client.</p>`,
-      skills: ['Google Maps', 'JavaScript', 'jQuery', 'Prototype', 'PHP', 'AJAX', 'HTML', 'CSS'],
+      skills: [
+        'Google Maps',
+        'JavaScript',
+        'jQuery',
+        'Prototype',
+        'PHP',
+        'AJAX',
+        'HTML',
+        'CSS',
+      ],
       highlights: ['lorem1', 'lorem2'],
       images: [gool1, gool2, gool3],
     }, {
@@ -227,7 +254,14 @@ class Portfolio extends Component {
         restaurant in Sitges - Barcelona, is a really easy webpage.</p>
         <p>We are planning update the design this year, because looks bit old,
         It already has 4 years.</p>`,
-      skills: ['PHP', 'HTML', 'CSS', 'JavaScript', 'jQuery', 'AJAX'],
+      skills: [
+        'PHP',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'jQuery',
+        'AJAX',
+      ],
       highlights: ['lorem1', 'lorem2'],
       images: [elcafe1, elcafe2, elcafe3],
     },
