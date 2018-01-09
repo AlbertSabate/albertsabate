@@ -50,6 +50,7 @@ module.exports = (env) => {
                 loader: 'sass-loader',
                 options: {
                   sourceMap: !isProduction,
+                  outputStyle: isProduction ? 'compressed' : 'expanded',
                 },
               },
             ],
@@ -83,6 +84,7 @@ module.exports = (env) => {
       }),
       new CopyWebpackPlugin([
         { context: './src/assets/files', from: '*', to: 'assets/files' },
+        { context: './src/manifest.json', from: '*', to: 'manifest.json' },
         { context: './src/assets/favicons', from: 'favicon.ico' },
         { context: './src/assets/favicons', from: '*', to: 'assets/favicons' },
       ], {
