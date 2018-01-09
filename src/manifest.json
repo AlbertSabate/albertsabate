@@ -5,7 +5,7 @@
   "display": "standalone",
   "background_color": "#FFF",
   "description": "Albert Sabaté Personal WebPage",
-  "theme-color": "#FFF",
+  "theme_color": "#FFF",
   "icons": [{
     "src": "/assets/favicons/android-icon-36x36.png",
     "sizes": "36x36",
@@ -36,5 +36,13 @@
     "sizes": "192x192",
     "type": "image/png",
     "density": "4.0"
+  }, {
+    "src": "/assets/favicons/icon_256x256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }, {
+    "src": "/assets/favicons/icon_512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
   }]
 }
