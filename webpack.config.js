@@ -5,9 +5,14 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 module.exports = (env) => {
   const isProduction = env === 'production'
+  let PUBLIC_PATH = 'http://localhost:8080/'
+  if (isProduction) {
+    PUBLIC_PATH = 'https://albertsabate.me/'
+  }
 
   const config = {
     entry: {
@@ -19,6 +24,7 @@ module.exports = (env) => {
     output: {
       path: path.join(__dirname, 'public'),
       filename: 'assets/js/[name]-[hash].js',
+      publicPath: PUBLIC_PATH,
     },
     resolve: {
       extensions: ['.js', '.jsx'],
@@ -105,6 +111,14 @@ module.exports = (env) => {
 
   if (isProduction) {
     config.plugins.push(new UglifyJSPlugin())
+    config.plugins.push(new SWPrecacheWebpackPlugin({
+      cacheId: 'albert-sabate-app',
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: 'assets/js/service-worker.js',
+      minify: isProduction,
+      navigateFallback: `${PUBLIC_PATH}index.html`,
+      staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/],
+    }))
   }
 
   return config

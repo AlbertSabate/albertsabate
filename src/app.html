@@ -46,13 +46,23 @@
     </noscript>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61350827-2"></script>
     <script>
-      /* eslint no-undef: "off", prefer-rest-params: "off", indent: "off" */
+      /*
+        eslint no-undef: "off",
+        prefer-rest-params: "off",
+        indent: "off", no-restricted-globals: "off"
+      */
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
       gtag('config', 'UA-61350827-2');
+
+      (() => {
+        if ('serviceWorker' in navigator && (location.port === '80' || location.port === '')) {
+          navigator.serviceWorker.register('/assets/js/service-worker.js');
+        }
+      })();
     </script>
   </body>
 </html>
