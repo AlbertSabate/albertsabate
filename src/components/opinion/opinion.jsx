@@ -10,9 +10,9 @@ class Opinions extends Component {
     return (
       <section id="form-contact" className="form-contact">
         <Container className="text-center py-15">
-          <h1>WHAT MY PREVIOUS BOSSES SAY</h1>
-          <Row className="m-10">
-            <Col className="p-5">
+          <h1>WHAT MY COLLEAGUES SAY</h1>
+          <Row>
+            <Col className="my-5 p-5">
               <div className="opinion-box">
                 <div className="opinion-img">
                   <a

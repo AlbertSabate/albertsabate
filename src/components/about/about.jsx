@@ -52,7 +52,7 @@ class About extends Component {
               </div>
             </Col>
             <Col xs="false" md="8">
-              <div className="pl-10 pt-10">
+              <div className="pt-10">
                 <div className="profile-desc mb-8">
                   <h1>HELLO!</h1>
                   <span className="my-8">
